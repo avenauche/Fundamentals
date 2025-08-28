@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
-
-    <script>
+    <script src="loops.js"></script>
+    <!-- <script>
         
         var a = new Array(10);
 
@@ -85,23 +86,65 @@
 
         
 
-    </script>
+    </script> -->
 
 </head>
-<body>
+
+<body onload="init()">
     <div id="container" class="container">
         <div1>3</div1>
         <div2>3</div2>
         <div3>3</div3>
         <div4>3</div4>
         <input type="button" value="click here" disabled>
-        <select name="" id="">
-            <option value="1" >1</option>
-            <option value="2" selected>2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
+
+        <select name="country" id="country">
+            <option value="" selected>Please select your country</option>
+            <option value="IN">India</option>
+            <option value="SG">Singapore</option>
+            <option value="ML">Malaysia</option>
+            <option value="TH">Thailand</option>
+            <option value="SL">Srilanka</option>
         </select>
+
+        <select name="state" id="IN" style="display: none;">
+            <option value="" selected>Please select your state/province</option>
+            <option value="Tamilnadu">Tamilnadu</option>
+            <option value="Kerala">Kerala</option>
+            <option value="AndhraPradesh">Andhra Pradesh</option>
+        </select>
+
+        <select name="state" id="SG" style="display: none;">
+            <option value="" selected>Please select your state/province</option>
+            <option value="Sembawang">Sembawang</option>
+            <option value="Kallang">Kallang</option>
+            <option value="Jurong">Jurong</option>
+        </select>
+
+        <select name="state" id="ML" style="display: none;">
+            <option value="" selected>Please select your state/province</option>
+            <option value="Johor">Johor</option>
+            <option value="Penang">Penang</option>
+            <option value="KualaLumpur">Kuala Lumpur</option>
+        </select>
+
+        <select name="state" id="TH" style="display: none;">
+            <option value="" selected>Please select your state/province</option>
+            <option value="Chanthaburi">Chanthaburi</option>
+            <option value="Phuket">Phuket</option>
+            <option value="Saraburi">Saraburi</option>
+        </select>
+
+        <select name="state" id="SL" style="display: none;">
+            <option value="" selected>Please select your state/province</option>
+            <option value="Kandy">Kandy</option>
+            <option value="Colombo">Colombo</option>
+            <option value="Hambantota">Hambantota</option>
+        </select>
+
+
     </div>
 
 </body>
+
 </html>

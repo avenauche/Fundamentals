@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 segment Display</title>
+    <script src="7segment.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000;
+        }
+
+        .day {
+            display: flex;
+            height: 400px;
+            width: 100%;
+            border: 4px solid yellow;
+        }
+
+        .h {
+            height: 20px;
+            width: 100px;
+        }
+
+        .v {
+            height: 100px;
+            width: 20px;
+        }
+
+        .hyphen {
+            width: 100px;
+            font-size: 3em;
+            color: greenyellow;
+            /* align-self: center; */
+        }
+
+        .date {
+            height: 400px;
+            width: 20vw;
+            /* display: flex; */
+            border: 1px solid orange;
+        }
+
+        .month {
+            height: 400px;
+            width: 20vw;
+            /* display: flex; */
+        }
+
+        .year {
+            height: 400px;
+            width: 40vw;
+            /* display: flex; */
+        }
+
+        .segment {
+            border: 2px solid white;
+            width: 10vw;
+            height: 100%;
+        }
+
+        .a {
+            position: relative;
+            border: 1px solid red;
+            top: 20px;
+            left: 20px;
+        }
+
+        .b {
+
+        }
+
+        .c {
+
+        }
+
+        .d {
+
+        }
+
+        .e {
+
+        }
+
+        .f {
+
+        }
+
+        .g {
+            position: relative;
+            border: 1px solid orange;
+            top: 120px;
+            left: 20px;
+        }
+
+        
+
+    </style>
+</head>
+
+<body onload="init()">
+
+    <div class="day">
+        <div class="date">
+            <div class="segment tens">
+                <div class="a h"></div>
+                <div class="b v"></div>
+                <div class="c v"></div>
+                <div class="d h"></div>
+                <div class="e v"></div>
+                <div class="f v"></div>
+                <div class="g h"></div>
+            </div>
+
+            <div class="segment ones">
+                <div class="a h"></div>
+                <div class="b v"></div>
+                <div class="c v"></div>
+                <div class="d h"></div>
+                <div class="e v"></div>
+                <div class="f v"></div>
+                <div class="g h"></div>
+            </div>
+        </div>
+
+        <h1 class="hyphen"> -- </h1>
+
+        <div class="month">
+            <div class="segment">
+                <div class="a h"></div>
+                <div class="b v"></div>
+                <div class="c v"></div>
+                <div class="d h"></div>
+                <div class="e v"></div>
+                <div class="f v"></div>
+                <div class="g h"></div>
+            </div>
+
+            <div class="segment">
+                <div class="a h"></div>
+                <div class="b v"></div>
+                <div class="c v"></div>
+                <div class="d h"></div>
+                <div class="e v"></div>
+                <div class="f v"></div>
+                <div class="g h"></div>
+            </div>
+        </div>
+
+        <h1 class="hyphen"> -- </h1>
+
+        <div class="year">
+            <div class="segment">
+                <div class="a h"></div>
+                <div class="b v"></div>
+                <div class="c v"></div>
+                <div class="d h"></div>
+                <div class="e v"></div>
+                <div class="f v"></div>
+                <div class="g h"></div>
+            </div>
+
+            <div class="segment">
+                <div class="a h"></div>
+                <div class="b v"></div>
+                <div class="c v"></div>
+                <div class="d h"></div>
+                <div class="e v"></div>
+                <div class="f v"></div>
+                <div class="g h"></div>
+            </div>
+
+            <div class="segment">
+                <div class="a h"></div>
+                <div class="b v"></div>
+                <div class="c v"></div>
+                <div class="d h"></div>
+                <div class="e v"></div>
+                <div class="f v"></div>
+                <div class="g h"></div>
+            </div>
+
+            <div class="segment">
+                <div class="a h"></div>
+                <div class="b v"></div>
+                <div class="c v"></div>
+                <div class="d h"></div>
+                <div class="e v"></div>
+                <div class="f v"></div>
+                <div class="g h"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

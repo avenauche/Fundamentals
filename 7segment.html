@@ -18,10 +18,24 @@
         }
 
         .container {
-            /* border: 2px solid yellow; */
             height: 400px;
             position: absolute;
             top: 200px;
+            animation: 2s blinker linear infinite;
+        }
+
+        @keyframes blinker {
+            0% {
+                opacity: 1.0;
+            }
+
+            50% {
+                opacity: 0.0;
+            }
+
+            100% {
+                opacity: 1.0;
+            }
         }
 
 
@@ -127,7 +141,7 @@
             top: 80px;
             left: 40px;
         }
-        
+
         .show {
             background-color: greenyellow;
         }
@@ -135,7 +149,6 @@
         .hide {
             background-color: black;
         }
-
     </style>
 </head>
 
@@ -144,23 +157,23 @@
     <div class="container">
         <div class="date">
             <div class="segment tens">
-                <span class="a h hide">&nbsp;</span>
-                <span class="b v hide">&nbsp;</span>
-                <span class="c v hide">&nbsp;</span>
-                <span class="g h hide">&nbsp;</span>
-                <span class="e v hide">&nbsp;</span>
-                <span class="f v hide">&nbsp;</span>
-                <span class="d h hide">&nbsp;</span>
+                <div class="a h hide">&nbsp;</div>
+                <div class="b v hide">&nbsp;</div>
+                <div class="c v hide">&nbsp;</div>
+                <div class="g h hide">&nbsp;</div>
+                <div class="e v hide">&nbsp;</div>
+                <div class="f v hide">&nbsp;</div>
+                <div class="d h hide">&nbsp;</div>
             </div>
 
             <div class="segment ones">
-                <span class="a h hide">&nbsp;</span>
-                <span class="b v hide">&nbsp;</span>
-                <span class="c v hide">&nbsp;</span>
-                <span class="g h hide">&nbsp;</span>
-                <span class="e v hide">&nbsp;</span>
-                <span class="f v hide">&nbsp;</span>
-                <span class="d h hide">&nbsp;</span>
+                <div class="a h hide">&nbsp;</div>
+                <div class="b v hide">&nbsp;</div>
+                <div class="c v hide">&nbsp;</div>
+                <div class="g h hide">&nbsp;</div>
+                <div class="e v hide">&nbsp;</div>
+                <div class="f v hide">&nbsp;</div>
+                <div class="d h hide">&nbsp;</div>
             </div>
         </div>
 
@@ -168,23 +181,23 @@
 
         <div class="month">
             <div class="segment tens">
-                <span class="a h hide">&nbsp;</span>
-                <span class="b v hide">&nbsp;</span>
-                <span class="c v hide">&nbsp;</span>
-                <span class="g h hide">&nbsp;</span>
-                <span class="e v hide">&nbsp;</span>
-                <span class="f v hide">&nbsp;</span>
-                <span class="d h hide">&nbsp;</span>
+                <div class="a h hide">&nbsp;</div>
+                <div class="b v hide">&nbsp;</div>
+                <div class="c v hide">&nbsp;</div>
+                <div class="g h hide">&nbsp;</div>
+                <div class="e v hide">&nbsp;</div>
+                <div class="f v hide">&nbsp;</div>
+                <div class="d h hide">&nbsp;</div>
             </div>
 
             <div class="segment ones">
-                <span class="a h hide">&nbsp;</span>
-                <span class="b v hide">&nbsp;</span>
-                <span class="c v hide">&nbsp;</span>
-                <span class="g h hide">&nbsp;</span>
-                <span class="e v hide">&nbsp;</span>
-                <span class="f v hide">&nbsp;</span>
-                <span class="d h hide">&nbsp;</span>
+                <div class="a h hide">&nbsp;</div>
+                <div class="b v hide">&nbsp;</div>
+                <div class="c v hide">&nbsp;</div>
+                <div class="g h hide">&nbsp;</div>
+                <div class="e v hide">&nbsp;</div>
+                <div class="f v hide">&nbsp;</div>
+                <div class="d h hide">&nbsp;</div>
             </div>
         </div>
 
@@ -192,43 +205,43 @@
 
         <div class="year">
             <div class="segment thousands">
-                <span class="a h hide">&nbsp;</span>
-                <span class="b v hide">&nbsp;</span>
-                <span class="c v hide">&nbsp;</span>
-                <span class="g h hide">&nbsp;</span>
-                <span class="e v hide">&nbsp;</span>
-                <span class="f v hide">&nbsp;</span>
-                <span class="d h hide">&nbsp;</span>
+                <div class="a h hide">&nbsp;</div>
+                <div class="b v hide">&nbsp;</div>
+                <div class="c v hide">&nbsp;</div>
+                <div class="g h hide">&nbsp;</div>
+                <div class="e v hide">&nbsp;</div>
+                <div class="f v hide">&nbsp;</div>
+                <div class="d h hide">&nbsp;</div>
             </div>
 
             <div class="segment hundreds">
-                <span class="a h hide">&nbsp;</span>
-                <span class="b v hide">&nbsp;</span>
-                <span class="c v hide">&nbsp;</span>
-                <span class="g h hide">&nbsp;</span>
-                <span class="e v hide">&nbsp;</span>
-                <span class="f v hide">&nbsp;</span>
-                <span class="d h hide">&nbsp;</span>
+                <div class="a h hide">&nbsp;</div>
+                <div class="b v hide">&nbsp;</div>
+                <div class="c v hide">&nbsp;</div>
+                <div class="g h hide">&nbsp;</div>
+                <div class="e v hide">&nbsp;</div>
+                <div class="f v hide">&nbsp;</div>
+                <div class="d h hide">&nbsp;</div>
             </div>
 
             <div class="segment tens">
-                <span class="a h hide">&nbsp;</span>
-                <span class="b v hide">&nbsp;</span>
-                <span class="c v hide">&nbsp;</span>
-                <span class="g h hide">&nbsp;</span>
-                <span class="e v hide">&nbsp;</span>
-                <span class="f v hide">&nbsp;</span>
-                <span class="d h hide">&nbsp;</span>
+                <div class="a h hide">&nbsp;</div>
+                <div class="b v hide">&nbsp;</div>
+                <div class="c v hide">&nbsp;</div>
+                <div class="g h hide">&nbsp;</div>
+                <div class="e v hide">&nbsp;</div>
+                <div class="f v hide">&nbsp;</div>
+                <div class="d h hide">&nbsp;</div>
             </div>
 
             <div class="segment ones">
-                <span class="a h hide">&nbsp;</span>
-                <span class="b v hide">&nbsp;</span>
-                <span class="c v hide">&nbsp;</span>
-                <span class="g h hide">&nbsp;</span>
-                <span class="e v hide">&nbsp;</span>
-                <span class="f v hide">&nbsp;</span>
-                <span class="d h hide">&nbsp;</span>
+                <div class="a h hide">&nbsp;</div>
+                <div class="b v hide">&nbsp;</div>
+                <div class="c v hide">&nbsp;</div>
+                <div class="g h hide">&nbsp;</div>
+                <div class="e v hide">&nbsp;</div>
+                <div class="f v hide">&nbsp;</div>
+                <div class="d h hide">&nbsp;</div>
             </div>
         </div>
     </div>

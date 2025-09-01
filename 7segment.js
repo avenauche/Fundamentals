@@ -190,6 +190,7 @@ function init() {
     function setDate(d){
         const digits = getDigitsMap()
         const date = d.getDate();
+        // const date = d.getHours();
         const [dateTens, dateOnes] = date.toString().padStart(2, "0").split("");
 
         setDateTens(digits[dateTens]);
@@ -199,6 +200,7 @@ function init() {
     function setMonth(d){
         const digits = getDigitsMap()
         const month = d.getMonth()+1;
+        // const month = d.getMinutes();
         const [monthTens, monthOnes] = month.toString().padStart(2, "0").split("");
 
         setMonthTens(digits[monthTens]);
@@ -208,6 +210,7 @@ function init() {
     function setYear(d){
         const digits = getDigitsMap()
         const year = d.getFullYear();
+        // const year = d.getSeconds();
         const [yearThousands, yearHundreds, yearTens, yearOnes] = year.toString().padStart(4, "0").split("");
         
         setYearThousands(digits[yearThousands]);

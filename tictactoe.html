@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <script src="tictactoe.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #333;
+            user-select: none;
+        }
+
+        table {
+            margin: 0 auto;
+            border-spacing: 50px;
+        }
+
+        table button,
+        .close {
+            height: 160px;
+            width: 160px;
+            font-size: 8em;
+            text-transform: capitalize;
+            border-radius: 30px;
+            background-color: #000;
+            border: 10px solid skyblue;
+            inset: 10px;
+        }
+
+        .x {
+            color: white;
+        }
+
+        .o {
+            color: greenyellow;
+        }
+
+        @keyframes rainbow-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+
+        }
+
+        .rainbow-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background: linear-gradient(to left,
+                    red,
+                    orange,
+                    yellow,
+                    green,
+                    blue,
+                    indigo,
+                    violet);
+
+            background-size: 400% 100%;
+            z-index: 1;
+            animation: rainbow-animation 15s linear infinite;
+        }
+
+        .glass-overlay {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 50%;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 0 0 10px 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .glass-overlay h1 {
+            color: #000;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            display: inline;
+        }
+
+        .scorePanel {
+            display: flex;
+            position: relative;
+            height: 100px;
+        }
+
+        .title {
+            width: 50%;
+            float: left;
+        }
+
+        .turn {
+            color: #FFF;
+            width: 50%;
+            float: right;
+            text-align: right;
+        }
+
+        .playNewGame {
+            position: absolute;
+            top: 150px;
+            font-size: 3em;
+            height: 75%;
+        }
+
+        .playNewGame h1 {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            color: #FFF;
+
+        }
+
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .gameStatus {
+            position: absolute;
+            top: 140px;
+            font-size: 3em;
+            height: 70%;
+            color: #FFF;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .close {
+            font-size: 3em;
+            color: red;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="scorePanel" class="scorePanel">
+        <div class="rainbow-gradient"></div>
+
+        <div class="glass-overlay">
+            <div class="title">
+                <h1>Tic Tac Toe</h1>
+            </div>
+            <div class="turn">
+                <h1>Next Turn: </h1>
+                <h1 id="turn">Player 1</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <button id="playNewGame" class="glass-overlay playNewGame show" onclick="playNewGame()">
+        <h1>Start</h1>
+    </button>
+
+
+    <table>
+        <tr>
+            <td>
+                <button id="1" onclick="process(this)"></button>
+            </td>
+            <td>
+                <button id="2" onclick="process(this)"></button>
+            </td>
+            <td>
+                <button id="3" onclick="process(this)"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="4" onclick="process(this)"></button>
+            </td>
+            <td>
+                <button id="5" onclick="process(this)"></button>
+            </td>
+            <td>
+                <button id="6" onclick="process(this)"></button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="7" onclick="process(this)"></button>
+            </td>
+            <td>
+                <button id="8" onclick="process(this)"></button>
+            </td>
+            <td>
+                <button id="9" onclick="process(this)"></button>
+            </td>
+        </tr>
+    </table>
+
+
+    <dialog id="gameStatus" class="gameStatus glass-overlay" oncancel="cancelClosingGame()">
+        <div style="position:absolute; top:200px; left: 45%;">
+            <h2 id="winner" style="position: relative; left: -150px; top: -100px;"></h2>
+            <button id="closeModalButton" class="close" onclick="closeGameStatus()">X</button>
+        </div>
+    </dialog>
+</body>
+
+</html>
